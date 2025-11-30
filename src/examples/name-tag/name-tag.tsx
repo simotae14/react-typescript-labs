@@ -1,14 +1,14 @@
 import type { JSX } from 'react';
 
-interface Employee {
+type Employee = {
   name: string;
   title: string;
-}
+};
 
-interface NameTagProps extends Employee {
+type NameTagProps = Employee & {
   level: number;
   isOnline: boolean;
-}
+};
 
 export const NameTag = ({ name, title, level, isOnline }: NameTagProps): JSX.Element => {
   return (
