@@ -1,4 +1,13 @@
-export const NameTag = ({ name = '', title = '', level = 0, isOnline = false }) => {
+import type { JSX } from 'react';
+
+type NameTagProps = {
+  name: string;
+  title: string;
+  level: number;
+  isOnline: boolean;
+};
+
+export const NameTag = ({ name, title, level, isOnline }: NameTagProps): JSX.Element => {
   return (
     <div className="w-96 overflow-hidden rounded-xl border-2 border-red-600 bg-white shadow-md">
       <div className="bg-red-600 px-4 py-2 text-center font-bold tracking-widest text-white uppercase">
